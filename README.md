@@ -49,7 +49,7 @@ This repository shares the same cross-compilation toolchain and sysroot as [arkk
 |------------|-------------|
 | Linux host (amd64/x86_64) | [rustup](https://rustup.rs/) installed |
 | **C cross toolchain** | `arm-rockchip830-linux-uclibcgnueabihf/` (`BUILDKIT_ROOT`) |
-| **Sysroot libraries** | MPI libs from the system build (e.g. `rockit`, `rockchip_mpp`, `rga`); see [arkkvm-system-v1](https://github.com/arkkvm/arkkvm-system-v1) |
+| **Sysroot libraries** | MPI libs from the system build (e.g. `rockit`, `rockchip_mpp`, `rga`); see [arkkvm-system](https://github.com/arkkvm/arkkvm-system) |
 | **Rust stage2 toolchain** | Built from Rust source tag **`1.94.1`**; use `cargo +stage2` |
 | **Cross linker** | `$BUILDKIT_ROOT/bin/arm-rockchip830-linux-uclibcgnueabihf-gcc` |
 | `bindgen-cli` | Generates Rockchip MPI FFI bindings (`build.sh` installs it if missing) |
@@ -174,7 +174,7 @@ arkkvm-usb-mic/
 | Firmware | [arkkvm-app](https://github.com/arkkvm/arkkvm-app) |
 | Web UI | [arkkvm-app-frontend](https://github.com/arkkvm/arkkvm-app-frontend) |
 | Virtual microphone | [arkkvm-usb-mic](https://github.com/arkkvm/arkkvm-usb-mic) (this repo) |
-| System / toolchain | [arkkvm-system-v1](https://github.com/arkkvm/arkkvm-system-v1) |
+| System / toolchain | [arkkvm-system](https://github.com/arkkvm/arkkvm-system) |
 
 ## License
 
@@ -188,7 +188,7 @@ arkkvm-usb-mic/
 ### What this license does not cover
 
 - **ArkKVM system images** distributed for device flashing (proprietary product delivery)
-- **Rockchip SDK libraries** (`librockit`, `librockchip_mpp`, `librga`, `librockiva`, `librknnmrt`, `librkaudio`) — proprietary; obtain via [arkkvm-system-v1](https://github.com/arkkvm/arkkvm-system-v1) or Rockchip SDK
+- **Rockchip SDK libraries** (`librockit`, `librockchip_mpp`, `librga`, `librockiva`, `librknnmrt`, `librkaudio`) — proprietary; obtain via [arkkvm-system](https://github.com/arkkvm/arkkvm-system) or Rockchip SDK
 - Other ArkKVM components (`arkkvm_app`, `arkkvm_usb`) in separate repositories
 
 ### Third-party components
