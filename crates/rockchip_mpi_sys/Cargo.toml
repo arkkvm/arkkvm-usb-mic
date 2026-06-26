@@ -1,0 +1,12 @@
+[package]
+name = "rockchip_mpi_sys"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-2.0-or-later"
+authors = ["Ark Intelligent"]
+description = "Rockchip MPI FFI bindings for arkkvm_mic"
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.72.1"

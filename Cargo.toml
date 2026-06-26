@@ -1,0 +1,33 @@
+[package]
+name = "arkkvm_mic"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-2.0-or-later"
+authors = ["Ark Intelligent"]
+repository = "https://github.com/arkkvm/arkkvm-usb-mic"
+description = "Virtual-microphone audio playback daemon for ArkKVM"
+
+[lib]
+name = "arkkvm_mic"
+crate-type = ["staticlib", "rlib"]
+
+[[bin]]
+name = "arkkvm_mic"
+path = "src/main.rs"
+
+
+[dependencies]
+rockchip_mpi_sys = { path = "./crates/rockchip_mpi_sys" }
+anyhow = "1.0.98"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1.41"
+tracing-subscriber = "0.3.20"
+once_cell = "1.21.3"
+parking_lot = "0.12.4"
+tokio = { version = "1.46.1", features = ["full", "macros"] }
+tokio-util = { version = "0.7.16", default-features = false }
+libc = { version = "0.2.175", default-features = false }
+zenoh = { version = "=1.5.1", default-features = false, features = [
+  "transport_unixsock-stream",
+] }
